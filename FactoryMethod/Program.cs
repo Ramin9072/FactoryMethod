@@ -1,6 +1,4 @@
 ﻿using FactoryMethod;
-using FactoryMethod.Application;
-using FactoryMethod.Business;
 using FactoryMethod.Model;
 
 public class Program
