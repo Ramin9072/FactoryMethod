@@ -27,7 +27,7 @@ namespace FactoryMethod.Model
         public static Payment ForPayingOrder(Order order) {
             return new Payment(order.TotalPrice);
         }
-        public static Payment ForChargingWallet(long amount)
+         public static Payment ForChargingWallet(long amount)
         {
             return new Payment(amount);
         }
@@ -45,7 +45,5 @@ namespace FactoryMethod.Model
         }
 
         public long TotalPrice { get; set; }
-
-
     }
 }
