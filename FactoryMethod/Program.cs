@@ -1,22 +1,19 @@
 ﻿using FactoryMethod;
 using FactoryMethod.Application;
 using FactoryMethod.Business;
+using FactoryMethod.Model;
 
 public class Program
 {
     private static void Main(string[] args)
     {
-        Console.Title = "Factory method ";
+        // simple factory
+        //var payment = Payment.ForChargingWallet();
+        //var payment1 = Payment.ForPayingOrder();
 
-        ICarFactory carFactory = null;
-        ICar car = null;
-        string model = null;
+        var order = new Order(1000);
+        Payment.ForPayingOrder(order);
 
-        carFactory = new BenzFactory();
-        car = carFactory.GetCar();
 
-        model = Console.ReadLine();
-        Console.WriteLine($"Car Model is : {model} and price {car.GetPriceByMode(model)}");
-        Console.ReadKey();
     }
 }
